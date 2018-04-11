@@ -5,36 +5,85 @@
     android:layout_height="match_parent"
     tools:context="com.example.dino.lv2.MainActivity"
     android:orientation="vertical">
-    
-    <ImageView
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/colorRed"
-        android:layout_margin="10dp"/>
+        android:layout_weight="1">
 
-    <ImageView
+        <ImageView
+            android:id="@+id/iv_Temperature"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorRed"
+            android:layout_margin="10dp">
+        </ImageView>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/temperatureicon"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/colorBlue"
-        android:layout_margin="10dp"/>
+        android:layout_weight="1">
 
-    <ImageView
+        <ImageView
+            android:id="@+id/iv_Distance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlue"
+            android:layout_margin="10dp"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/distanceicon"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/colorPurple"
-        android:layout_margin="10dp"/>
+        android:layout_weight="1">
 
-    <ImageView
+        <ImageView
+            android:id="@+id/iv_Units"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPurple"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/unitsicon"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/colorGreen"
-        android:layout_margin="10dp"/>
+        android:layout_weight="1">
 
+        <ImageView
+            android:id="@+id/iv_Speed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGreen"
+            android:layout_margin="10dp"/>
 
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/speedicon"
+            android:layout_centerInParent="true"/>
 
+    </RelativeLayout>
 
 </LinearLayout>

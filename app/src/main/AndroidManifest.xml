@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity_TemperatureConvert" />
+        <activity android:name=".activity_DistanceConvert" />
+        <activity android:name=".activity_SpeedConvert" />
+        <activity android:name=".activity_UnitsConvert"></activity>
     </application>
 
 </manifest>
