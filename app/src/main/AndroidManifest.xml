@@ -19,7 +19,8 @@
         <activity android:name=".activity_TemperatureConvert" />
         <activity android:name=".activity_DistanceConvert" />
         <activity android:name=".activity_SpeedConvert" />
-        <activity android:name=".activity_UnitsConvert"></activity>
+        <activity android:name=".activity_UnitsConvert" />
+        <activity android:name=".activity_Results"></activity>
     </application>
 
 </manifest>
