@@ -9,5 +9,6 @@
     <color name="colorPurple">#50217F</color>
     <color name="colorGreen">#28872B</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorResultBlue">#109874</color>
 
 </resources>

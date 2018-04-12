@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -66,56 +67,68 @@ public class activity_TemperatureConvert extends AppCompatActivity implements Vi
     public void onClick(View view) {
         String ConvertFrom = String.valueOf(spinnerTemperatureFrom.getSelectedItem());
         String ConvertTo =  String.valueOf(spinnerTemperatureTo.getSelectedItem());
-        Float value = Calculate(ConvertFrom,ConvertTo);
+        Double value = Calculate(ConvertFrom,ConvertTo);
         if(value != null)
         {
             Intent dataSender = new Intent(this,activity_Results.class);
-            dataSender.putExtra(activity_Results.KEY_VALUE_RESULT,value);
             dataSender.putExtra(activity_Results.MESSAGE_CONVERT_FROM,ConvertFrom);
+            dataSender.putExtra(activity_Results.KEY_VALUE_FROM,etTemperatureValue.getText().toString());
             dataSender.putExtra(activity_Results.MESSAGE_CONVERT_TO,ConvertTo);
-            dataSender.putExtra(activity_Results.KEY_VALUE_FROM,15);
+            dataSender.putExtra(activity_Results.KEY_VALUE_RESULT,String.valueOf(value));
             startActivity(dataSender);
         }
 
     }
-    private float Calculate(String From, String To)
+    private double Calculate(String From, String To)
     {
-        Float result = null;
+        Double result = null;
         switch (From)
         {
             case "Celsius":
                 if(To == "Fahrenheit")
                 {
-                    result = Float.parseFloat(etTemperatureValue.getText().toString()) *(9/5)+ 32;
+                    result = Double.parseDouble(etTemperatureValue.getText().toString()) *1.8 + 32;
                     break;
                 }
 
                 else if(To == "Kelvin")
                 {
-                    result = Float.parseFloat(etTemperatureValue.getText().toString()) + 275.15f;
+                    result = Double.parseDouble(etTemperatureValue.getText().toString()) + 273.15;
                     break;
+                }
+                else
+                {
+                    result = null;
                 }
             case "Fahrenheit":
                 if(To == "Celsius")
                 {
-                    result = (Float.parseFloat(etTemperatureValue.getText().toString()) - 32) * (5/9);
+                    result = (Double.parseDouble(etTemperatureValue.getText().toString()) - 32) * 0.5556;
                     break;
                 }
                 else if(To == "Kelvin")
                 {
-                    result = (Float.parseFloat(etTemperatureValue.getText().toString()) - 32) * (5/9) + 273.15f;
+                    result = (Double.parseDouble(etTemperatureValue.getText().toString()) +459.67) * 0.5556;
                     break;
+                }
+                else
+                {
+                    result = null;
                 }
             case "Kelvin":
                 if(To == "Celsius")
                 {
-                    result = Float.parseFloat(etTemperatureValue.getText().toString()) - 273.15f;
+                    result = Double.parseDouble(etTemperatureValue.getText().toString()) - 273.15;
                     break;
                 }
                 else if(To == "Fahrenheit")
                 {
-                    result = (9/5) * (Float.parseFloat(etTemperatureValue.getText().toString()) - 273.15f) + 32;
+                    result = Double.parseDouble(etTemperatureValue.getText().toString()) * 1.8 -459.67;
                     break;
+                }
+                else
+                {
+                    result = null;
                 }
         }
         return result;

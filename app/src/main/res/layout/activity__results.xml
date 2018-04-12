@@ -1,44 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_ResultsRootLayout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dino.lv2.activity_Results">
+    tools:context="com.example.dino.lv2.activity_Results"
+    android:background="@color/colorResultBlue">
 
     <TextView
-        android:id="@+id/tv_Results"
+        android:id="@+id/tv_ValueFrom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RESULTS"
+        android:text="VRIJEDNOST"
         android:layout_marginTop="120dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorWhite"/>
 
     <TextView
-        android:id="@+id/tv_ResultFrom"
+        android:id="@+id/tv_UnitFrom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_Results"
-        android:text="SomeValue"
-        android:layout_marginLeft="110dp"
-        android:layout_marginTop="50dp"/>
-    <TextView
-        android:id="@+id/tv_EqualsSign"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_Results"
-        android:text="="
+        android:layout_below="@id/tv_ValueFrom"
+        android:text="Unit"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_toRightOf="@id/tv_ResultFrom"/>
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorWhite"/>
     <TextView
-        android:id="@+id/tv_ResultTo"
+        android:id="@+id/tv_ValueTo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_Results"
-        android:text="SomeValue"
+        android:layout_below="@id/tv_UnitFrom"
+        android:text="Vrijednost"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:layout_toRightOf="@id/tv_EqualsSign"/>
+        android:textColor="@color/colorWhite"/>
+    <TextView
+        android:id="@+id/tv_UnitTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ValueTo"
+        android:text="Unit"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorWhite"/>
 
 </RelativeLayout>
