@@ -61,7 +61,7 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@mipmap/unitsicon"
+            android:src="@mipmap/dataicon"
             android:layout_centerInParent="true"/>
 
     </RelativeLayout>

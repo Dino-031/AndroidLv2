@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.setClass(this, activity_SpeedConvert.class);
                 break;
             case R.id.iv_Units:
-                intent.setClass(this, activity_UnitsConvert.class);
+                intent.setClass(this, activity_DataConvert.class);
                 break;
         }
         startActivity(intent);

@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/rl_TemperatureRootLayout"
+    android:id="@+id/rl_DataRootLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dino.lv2.activity_TemperatureConvert"
-    android:background="@color/colorRed">
+    tools:context="com.example.dino.lv2.activity_DataConvert"
+    android:background="@color/colorPurple">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="TEMPERATURE CONVERSION"
+        android:text="DATA CONVERSION"
         android:textColor="@color/colorWhite"
         />
     <TextView
-        android:id="@+id/tvFromTemp"
+        android:id="@+id/tv_FromData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="FROM"
@@ -26,49 +27,48 @@
         />
 
     <Spinner
-        android:id="@+id/spinner_TemperatureFrom"
+        android:id="@+id/spinner_DataFrom"
         android:layout_width="150dp"
         android:layout_height="30dp"
-        android:layout_below="@id/tvFromTemp"
+        android:layout_below="@id/tv_FromData"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="100dp">
     </Spinner>
 
     <EditText
-        android:id="@+id/et_temperatureValue"
+        android:id="@+id/et_DataValue"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:hint="Enter value..."
-        android:layout_below="@id/spinner_TemperatureFrom"
+        android:layout_below="@id/spinner_DataFrom"
         android:layout_centerHorizontal="true"/>
 
     <TextView
-        android:id="@+id/tvToTemp"
+        android:id="@+id/tv_ToData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TO"
         android:textColor="@color/colorWhite"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="170dp"
-        android:layout_below="@id/et_temperatureValue"
+        android:layout_below="@id/et_DataValue"
         />
 
     <Spinner
-        android:id="@+id/spinner_TemperatureTo"
+        android:id="@+id/spinner_DataTo"
         android:layout_width="150dp"
         android:layout_height="30dp"
-        android:layout_below="@id/tvToTemp"
+        android:layout_below="@id/tv_ToData"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="100dp">
     </Spinner>
 
     <Button
-        android:id="@+id/btn_CalculateTemperature"
+        android:id="@+id/btn_CalculateData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Calculate"
-        android:layout_below="@id/spinner_TemperatureTo"
+        android:layout_below="@id/spinner_DataTo"
         android:layout_centerHorizontal="true"/>
-
 
 </RelativeLayout>

@@ -28,8 +28,8 @@ public class activity_TemperatureConvert extends AppCompatActivity implements Vi
     @BindView(R.id.spinner_TemperatureTo)
     Spinner spinnerTemperatureTo;
 
-    @BindView(R.id.btn_Calculate)
-    Button btnCalculate;
+    @BindView(R.id.btn_CalculateTemperature)
+    Button btnCalculateTemperature;
 
     @BindView(R.id.et_temperatureValue)
     EditText etTemperatureValue;
@@ -48,7 +48,7 @@ public class activity_TemperatureConvert extends AppCompatActivity implements Vi
             }
         });
         SpinnersInit();
-        btnCalculate.setOnClickListener(this);
+        btnCalculateTemperature.setOnClickListener(this);
     }
 
     private void SpinnersInit()
@@ -68,16 +68,12 @@ public class activity_TemperatureConvert extends AppCompatActivity implements Vi
         String ConvertFrom = String.valueOf(spinnerTemperatureFrom.getSelectedItem());
         String ConvertTo =  String.valueOf(spinnerTemperatureTo.getSelectedItem());
         Double value = Calculate(ConvertFrom,ConvertTo);
-        if(value != null)
-        {
-            Intent dataSender = new Intent(this,activity_Results.class);
-            dataSender.putExtra(activity_Results.MESSAGE_CONVERT_FROM,ConvertFrom);
-            dataSender.putExtra(activity_Results.KEY_VALUE_FROM,etTemperatureValue.getText().toString());
-            dataSender.putExtra(activity_Results.MESSAGE_CONVERT_TO,ConvertTo);
-            dataSender.putExtra(activity_Results.KEY_VALUE_RESULT,String.valueOf(value));
-            startActivity(dataSender);
-        }
-
+        Intent dataSender = new Intent(this,activity_Results.class);
+        dataSender.putExtra(activity_Results.MESSAGE_CONVERT_FROM,ConvertFrom);
+        dataSender.putExtra(activity_Results.KEY_VALUE_FROM,etTemperatureValue.getText().toString());
+        dataSender.putExtra(activity_Results.MESSAGE_CONVERT_TO,ConvertTo);
+        dataSender.putExtra(activity_Results.KEY_VALUE_RESULT,String.valueOf(value));
+        startActivity(dataSender);
     }
     private double Calculate(String From, String To)
     {
@@ -98,7 +94,8 @@ public class activity_TemperatureConvert extends AppCompatActivity implements Vi
                 }
                 else
                 {
-                    result = null;
+                    result = Double.parseDouble(etTemperatureValue.getText().toString());
+                    break;
                 }
             case "Fahrenheit":
                 if(To == "Celsius")
@@ -113,7 +110,8 @@ public class activity_TemperatureConvert extends AppCompatActivity implements Vi
                 }
                 else
                 {
-                    result = null;
+                    result = Double.parseDouble(etTemperatureValue.getText().toString());
+                    break;
                 }
             case "Kelvin":
                 if(To == "Celsius")
@@ -128,7 +126,8 @@ public class activity_TemperatureConvert extends AppCompatActivity implements Vi
                 }
                 else
                 {
-                    result = null;
+                    result = Double.parseDouble(etTemperatureValue.getText().toString());
+                    break;
                 }
         }
         return result;
