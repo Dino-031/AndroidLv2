@@ -15,7 +15,7 @@ or swiping from left to right side of screen.
 
 ### Screenshots
 
-![Landscape of mainactivity](http://prntscr.com/j905v9)
+![Landscape of mainactivity](http://prntscr.com/j905v9 "test")
 
 ![Portrait of mainactivity](http://prntscr.com/j906dq)
 
