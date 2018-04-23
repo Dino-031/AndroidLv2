@@ -15,16 +15,6 @@ or swiping from left to right side of screen.
 
 ### Screenshots
 
-![Landscape of mainactivity](http://prntscr.com/j905v9 "test")
-
-![Portrait of mainactivity](http://prntscr.com/j906dq)
-
-![Portrait of activity_TemperatureConver](http://prntscr.com/j9074g)
-
-![Landscape of activity_TemperatureConver](http://prntscr.com/j907od)
-![Portrait of activity_Results](http://prntscr.com/j908ff)
-![Portrait of activity_DistanceConvert](http://prntscr.com/j908wa)
-![Portrait of activity_DataConvert](http://prntscr.com/j9099z)
-![Portrait of activity_SpeedConvert](http://prntscr.com/j909t0)
+![image](https://user-images.githubusercontent.com/30581389/39134012-e35b56ba-4715-11e8-9960-0576fb7db23e.png)
 
 
