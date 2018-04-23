@@ -16,8 +16,11 @@ or swiping from left to right side of screen.
 ### Screenshots
 
 ![Landscape of mainactivity](http://prntscr.com/j905v9)
+
 ![Portrait of mainactivity](http://prntscr.com/j906dq)
+
 ![Portrait of activity_TemperatureConver](http://prntscr.com/j9074g)
+
 ![Landscape of activity_TemperatureConver](http://prntscr.com/j907od)
 ![Portrait of activity_Results](http://prntscr.com/j908ff)
 ![Portrait of activity_DistanceConvert](http://prntscr.com/j908wa)
