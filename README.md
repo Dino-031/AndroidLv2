@@ -16,6 +16,6 @@ or swiping from left to right side of screen.
 ### Screenshots
 
 ![image](https://user-images.githubusercontent.com/30581389/39134012-e35b56ba-4715-11e8-9960-0576fb7db23e.png)
-![image](https://prnt.sc/j906dq)
+![image](https://user-images.githubusercontent.com/30581389/39134251-797c5996-4716-11e8-90f7-32ebd46fbb5e.png)
 
 
